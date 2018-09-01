@@ -50,13 +50,7 @@
                             <constraint firstItem="3wQ-ej-rIc" firstAttribute="top" secondItem="2mV-fq-WAX" secondAttribute="bottom" constant="20" id="vhB-F9-l8V"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E4e-Da-gBe">
-                        <barButtonItem key="leftBarButtonItem" title="change" id="SWx-Od-rom">
-                            <connections>
-                                <action selector="changeBgColor:" destination="BYZ-38-t0r" id="78I-Zw-gkp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="E4e-Da-gBe"/>
                     <connections>
                         <outlet property="textLabel" destination="k37-WI-nfm" id="Qg3-eu-rTg"/>
                     </connections>

@@ -18,19 +18,6 @@ public extension UIAlertController {
     }
     
     /**
-     return actionHandler with index of selected action and selected action.
-     */
-    public convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, actions: [UIAlertAction], actionHandler: ((Int, UIAlertAction) -> Void)?) {
-        
-        let handlerRemovedActions = actions.enumerated().map { i, action in
-            return UIAlertAction(title: action.title, style: action.style) { selectedAction in
-                actionHandler?(i, selectedAction)
-            }
-        }
-        self.init(title: title, message: message, preferredStyle: preferredStyle, actions: handlerRemovedActions)
-    }
-    
-    /**
      add multiple actions.
      */
     public func addActions(_ actions: [UIAlertAction]) {
