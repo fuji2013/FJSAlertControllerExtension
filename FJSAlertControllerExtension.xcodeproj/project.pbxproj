@@ -10,6 +10,7 @@
 		A72535AD213A625A0057C886 /* FJSAlertControllerExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72535A3213A625A0057C886 /* FJSAlertControllerExtension.framework */; };
 		A72535B2213A625A0057C886 /* FJSAlertControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72535B1213A625A0057C886 /* FJSAlertControllerExtensionTests.swift */; };
 		A72535B4213A625A0057C886 /* FJSAlertControllerExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A72535A6213A625A0057C886 /* FJSAlertControllerExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A72535BE213A63050057C886 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72535BD213A63050057C886 /* UIAlertController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A72535AC213A625A0057C886 /* FJSAlertControllerExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FJSAlertControllerExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72535B1213A625A0057C886 /* FJSAlertControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FJSAlertControllerExtensionTests.swift; sourceTree = "<group>"; };
 		A72535B3213A625A0057C886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72535BD213A63050057C886 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A72535A6213A625A0057C886 /* FJSAlertControllerExtension.h */,
 				A72535A7213A625A0057C886 /* Info.plist */,
+				A72535BD213A63050057C886 /* UIAlertController+.swift */,
 			);
 			path = FJSAlertControllerExtension;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					A72535A2213A625A0057C886 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					A72535AB213A625A0057C886 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72535BE213A63050057C886 /* UIAlertController+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +344,7 @@
 		A72535B8213A625A0057C886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift-studying.FJSAlertControllerExtension";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +370,7 @@
 		A72535B9213A625A0057C886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +395,7 @@
 		A72535BB213A625A0057C886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FJSAlertControllerExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +413,7 @@
 		A72535BC213A625A0057C886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FJSAlertControllerExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
