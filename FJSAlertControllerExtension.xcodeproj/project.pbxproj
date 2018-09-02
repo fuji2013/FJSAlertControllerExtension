@@ -12,6 +12,8 @@
 		A72535B4213A625A0057C886 /* FJSAlertControllerExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A72535A6213A625A0057C886 /* FJSAlertControllerExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A72535BE213A63050057C886 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72535BD213A63050057C886 /* UIAlertController+.swift */; };
 		A7253629213B9FD50057C886 /* FJSRxAlertControllerExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A7253627213B9FD50057C886 /* FJSRxAlertControllerExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A725362F213BA0AC0057C886 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A725362E213BA0AC0057C886 /* RxSwift.framework */; };
+		A7253632213BA1280057C886 /* FJSAlertController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7253631213BA1280057C886 /* FJSAlertController+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 		A7253625213B9FD40057C886 /* FJSRxAlertControllerExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FJSRxAlertControllerExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7253627213B9FD50057C886 /* FJSRxAlertControllerExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJSRxAlertControllerExtension.h; sourceTree = "<group>"; };
 		A7253628213B9FD50057C886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A725362E213BA0AC0057C886 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		A7253631213BA1280057C886 /* FJSAlertController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FJSAlertController+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A725362F213BA0AC0057C886 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,7 @@
 				A72535B0213A625A0057C886 /* FJSAlertControllerExtensionTests */,
 				A7253626213B9FD40057C886 /* FJSRxAlertControllerExtension */,
 				A72535A4213A625A0057C886 /* Products */,
+				A725362D213BA0AC0057C886 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,8 +113,17 @@
 			children = (
 				A7253627213B9FD50057C886 /* FJSRxAlertControllerExtension.h */,
 				A7253628213B9FD50057C886 /* Info.plist */,
+				A7253631213BA1280057C886 /* FJSAlertController+Rx.swift */,
 			);
 			path = FJSRxAlertControllerExtension;
+			sourceTree = "<group>";
+		};
+		A725362D213BA0AC0057C886 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A725362E213BA0AC0057C886 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +192,7 @@
 				A7253621213B9FD40057C886 /* Frameworks */,
 				A7253622213B9FD40057C886 /* Headers */,
 				A7253623213B9FD40057C886 /* Resources */,
+				A7253630213BA0B70057C886 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -206,6 +222,7 @@
 					};
 					A7253624213B9FD40057C886 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -252,6 +269,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A7253630213BA0B70057C886 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A725359E213A625A0057C886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7253632213BA1280057C886 /* FJSAlertController+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,12 +535,17 @@
 		A725362A213B9FD50057C886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FJSRxAlertControllerExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
@@ -516,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swift-studying.FJSRxAlertControllerExtension";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -524,12 +566,17 @@
 		A725362B213B9FD50057C886 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FJSRxAlertControllerExtension/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
