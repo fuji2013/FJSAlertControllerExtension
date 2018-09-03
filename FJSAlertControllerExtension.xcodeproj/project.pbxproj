@@ -24,6 +24,13 @@
 			remoteGlobalIDString = A72535A2213A625A0057C886;
 			remoteInfo = FJSAlertControllerExtension;
 		};
+		A72C0939213CFE4900F7BDA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A725359A213A625A0057C886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A72535A2213A625A0057C886;
+			remoteInfo = FJSAlertControllerExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -197,6 +204,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A72C093A213CFE4900F7BDA2 /* PBXTargetDependency */,
 			);
 			name = FJSRxAlertControllerExtension;
 			productName = FJSRxAlertControllerExtension;
@@ -319,6 +327,11 @@
 			isa = PBXTargetDependency;
 			target = A72535A2213A625A0057C886 /* FJSAlertControllerExtension */;
 			targetProxy = A72535AE213A625A0057C886 /* PBXContainerItemProxy */;
+		};
+		A72C093A213CFE4900F7BDA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A72535A2213A625A0057C886 /* FJSAlertControllerExtension */;
+			targetProxy = A72C0939213CFE4900F7BDA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

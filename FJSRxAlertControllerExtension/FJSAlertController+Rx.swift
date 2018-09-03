@@ -6,11 +6,18 @@
 //  Copyright © 2018年 swift-studying.com. All rights reserved.
 //
 
-import Foundation
+import FJSAlertControllerExtension
 import RxSwift
 
-extension UIViewController {
-    func testfunc() -> Observable<Bool> {
-        return Observable.just(true)
+extension Reactive where Base: UIViewController {
+    func present(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, actions: [UIAlertAction], animated: Bool) -> Observable<(Int, UIAlertAction)> {
+        return Observable.create({ (observer) -> Disposable in
+            let newAlertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle, actions: actions) { index, selectedAction in
+                observer.onNext((index, selectedAction))
+                observer.onCompleted()
+            }
+            self.base.present(newAlertController, animated: animated, completion: (observer.onCompleted))
+            return Disposables.create()
+        })
     }
 }
