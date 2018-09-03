@@ -10,13 +10,13 @@ import FJSAlertControllerExtension
 import RxSwift
 
 extension Reactive where Base: UIViewController {
-    func present(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, actions: [UIAlertAction], animated: Bool) -> Observable<(Int, UIAlertAction)> {
+    func present(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, actions: [UIAlertAction], animated: Bool, completion: (() -> Void)? = nil) -> Observable<(Int, UIAlertAction)> {
         return Observable.create({ (observer) -> Disposable in
             let newAlertController = UIAlertController(title: title, message: message, preferredStyle: preferredStyle, actions: actions) { index, selectedAction in
                 observer.onNext((index, selectedAction))
                 observer.onCompleted()
             }
-            self.base.present(newAlertController, animated: animated, completion: (observer.onCompleted))
+            self.base.present(newAlertController, animated: animated, completion: completion)
             return Disposables.create()
         })
     }
