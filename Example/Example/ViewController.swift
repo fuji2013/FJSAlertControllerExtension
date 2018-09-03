@@ -8,10 +8,21 @@
 
 import UIKit
 import FJSAlertControllerExtension
+import FJSRxAlertControllerExtension
+import RxSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
-
+    private let disposeBag = DisposeBag()
+    
+    @IBAction func tapRxExtension(_ sender: Any) {
+        rx.present(title: "title", message: "message", preferredStyle: .alert, buttons: [.cancel("NO"), .default("YES")], animated: true)
+            .subscribe(onNext: { [unowned self] index, selectedButton in
+                self.textLabel.text = selectedButton.title
+            })
+            .disposed(by: disposeBag)
+    }
+    
     @IBAction func tap(_ sender: Any) {
         let cancelAction = UIAlertAction(title: "cancel", style: .cancel) {
             self.textLabel.text = $0.title

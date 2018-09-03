@@ -13,6 +13,7 @@
 		A72535D3213A64760057C886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72535D2213A64760057C886 /* Assets.xcassets */; };
 		A72535D6213A64760057C886 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72535D4213A64760057C886 /* LaunchScreen.storyboard */; };
 		A725361F213B9CA40057C886 /* FJSAlertControllerExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A725361E213B9CA40057C886 /* FJSAlertControllerExtension.framework */; };
+		A72C093C213D0CF000F7BDA2 /* FJSRxAlertControllerExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72C093B213D0CF000F7BDA2 /* FJSRxAlertControllerExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A72535D5213A64760057C886 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72535D7213A64760057C886 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A725361E213B9CA40057C886 /* FJSAlertControllerExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FJSAlertControllerExtension.framework; path = Carthage/Build/iOS/FJSAlertControllerExtension.framework; sourceTree = "<group>"; };
+		A72C093B213D0CF000F7BDA2 /* FJSRxAlertControllerExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FJSRxAlertControllerExtension.framework; path = Carthage/Build/iOS/FJSRxAlertControllerExtension.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A725361F213B9CA40057C886 /* FJSAlertControllerExtension.framework in Frameworks */,
+				A72C093C213D0CF000F7BDA2 /* FJSRxAlertControllerExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +74,7 @@
 		A72535DD213A64BF0057C886 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A72C093B213D0CF000F7BDA2 /* FJSRxAlertControllerExtension.framework */,
 				A725361E213B9CA40057C886 /* FJSAlertControllerExtension.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +155,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/FJSAlertControllerExtension.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FJSRxAlertControllerExtension.framework",
 			);
 			name = Carthage;
 			outputPaths = (
