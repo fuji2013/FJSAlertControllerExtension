@@ -1,1 +1,2 @@
-github "fuji2013/FJSAlertControllerExtension" "v0.0.2"
+github "ReactiveX/RxSwift" "4.2.0"
+github "fuji2013/FJSAlertControllerExtension" "9fcebaba7b9c6e3cd4f6288472449b97035293c4"
