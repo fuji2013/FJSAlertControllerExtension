@@ -13,14 +13,14 @@ public enum AlertButton {
     case `default`(String?)
     case destructive(String?)
     
-    var title: String? {
+    public var title: String? {
         switch self {
         case .cancel(let title), .default(let title), .destructive(let title):
             return title
         }
     }
     
-    var style: UIAlertActionStyle {
+    public var style: UIAlertActionStyle {
         switch self {
         case .cancel:
             return .cancel
